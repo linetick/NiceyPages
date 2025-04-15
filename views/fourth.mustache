@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #2c3e50;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f8fafc;
+      }
+
+      .content-container {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        margin: 20px 0;
+      }
+
+      h1 {
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #3498db;
+        font-weight: 600;
+      }
+
+      p {
+        color: #4a5568;
+        font-size: 1.1em;
+        line-height: 1.7;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      nav {
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 25px;
+        border-top: 1px solid #e2e8f0;
+      }
+
+      nav a {
+        color: #3498db;
+        text-decoration: none;
+        margin: 0 12px;
+        padding: 8px 12px;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        display: inline-block;
+      }
+
+      nav a:hover {
+        color: #fff;
+        background-color: #3498db;
+        text-decoration: none;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(52, 152, 219, 0.2);
+      }
+
+      nav a:not(:last-child)::after {
+        content: "|";
+        color: #cbd5e0;
+        margin-left: 15px;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 15px;
+        }
+
+        .content-container {
+          padding: 20px;
+        }
+
+        nav a {
+          display: block;
+          margin: 10px 0;
+        }
+
+        nav a::after {
+          content: none;
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .content-container {
+        animation: fadeIn 0.5s ease-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content-container">
+      <h1>{{ title }}</h1>
+      <p>{{ content }}</p>
+    </div>
+
+    <nav>
+      <a href="/">Main</a>
+      <a href="/second">Second</a>
+      <a href="/third">Third</a>
+      <a href="/fourth">Fourth</a>
+      <a href="/form">Form</a>
+    </nav>
+  </body>
+</html>

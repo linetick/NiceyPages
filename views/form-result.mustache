@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f5f8fa;
+      }
+
+      h1 {
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #3498db;
+        font-weight: 600;
+      }
+
+      h2 {
+        color: #34495e;
+        text-align: center;
+        margin: 25px 0;
+        font-weight: 500;
+      }
+
+      ul {
+        background: white;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+        list-style: none;
+        margin: 30px 0;
+      }
+
+      li {
+        padding: 12px 15px;
+        border-bottom: 1px solid #ecf0f1;
+        transition: background 0.3s ease;
+      }
+
+      li:last-child {
+        border-bottom: none;
+      }
+
+      li:hover {
+        background-color: #f8f9fa;
+      }
+
+      li strong {
+        color: #3498db;
+        display: inline-block;
+        min-width: 120px;
+        font-weight: 500;
+      }
+
+      form {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        margin: 30px 0;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 15px;
+        }
+
+        ul,
+        form {
+          padding: 20px;
+        }
+
+        li strong {
+          display: block;
+          margin-bottom: 5px;
+        }
+
+        nav a {
+          display: inline-block;
+          margin: 8px 5px;
+          padding: 6px 10px;
+        }
+      }
+      nav {
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 25px;
+        border-top: 1px solid #e2e8f0;
+      }
+
+      nav a {
+        color: #3498db;
+        text-decoration: none;
+        margin: 0 12px;
+        padding: 8px 12px;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        display: inline-block;
+      }
+
+      nav a:hover {
+        color: #fff;
+        background-color: #3498db;
+        text-decoration: none;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(52, 152, 219, 0.2);
+      }
+
+      nav a:not(:last-child)::after {
+        content: "|";
+        color: #cbd5e0;
+        margin-left: 15px;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 15px;
+        }
+
+        .content-container {
+          padding: 20px;
+        }
+
+        nav a {
+          display: block;
+          margin: 10px 0;
+        }
+
+        nav a::after {
+          content: none;
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      ul {
+        animation: fadeIn 0.5s ease-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>{{ title }}</h1>
+
+      <h2>Your data:</h2>
+
+      <ul>
+        {{#fields}}
+        <li>
+          <strong>{{ key }}:</strong> <span>{{ value }}</span>
+        </li>
+        {{/fields}}
+      </ul>
+
+      <nav>
+        <a href="/">Main</a>
+        <a href="/second">Second</a>
+        <a href="/third">Third</a>
+        <a href="/fourth">Fourth</a>
+        <a href="/form">Form</a>
+      </nav>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+      }
+
+      h1 {
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #3498db;
+      }
+
+      p {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #7f8c8d;
+      }
+
+      form {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+
+      form div {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #2c3e50;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+        transition: border 0.3s;
+      }
+
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      select:focus,
+      textarea:focus {
+        border-color: #3498db;
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+      }
+
+      textarea {
+        min-height: 100px;
+        resize: vertical;
+      }
+
+      input[type="checkbox"] {
+        margin-right: 10px;
+      }
+
+      button[type="submit"] {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 100%;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #2980b9;
+      }
+
+      nav {
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 25px;
+        border-top: 1px solid #e2e8f0;
+      }
+
+      nav a {
+        color: #3498db;
+        text-decoration: none;
+        margin: 0 12px;
+        padding: 8px 12px;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        display: inline-block;
+      }
+
+      nav a:hover {
+        color: #fff;
+        background-color: #3498db;
+        text-decoration: none;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(52, 152, 219, 0.2);
+      }
+
+      nav a:not(:last-child)::after {
+        content: "|";
+        color: #cbd5e0;
+        margin-left: 15px;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 15px;
+        }
+
+        .content-container {
+          padding: 20px;
+        }
+
+        nav a {
+          display: block;
+          margin: 10px 0;
+        }
+
+        nav a::after {
+          content: none;
+        }
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 10px;
+        }
+
+        form {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>{{ title }}</h1>
+    <p>{{ content }}</p>
+
+    <form action="/submit-form" method="post">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div>
+        <label for="gender">Gen:</label>
+        <select id="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+
+      <div>
+        <label>
+          <input type="checkbox" name="subscribe" value="yes" />
+          Subscribe
+        </label>
+      </div>
+
+      <div>
+        <label for="comments">Another:</label>
+        <textarea id="comments" name="comments"></textarea>
+      </div>
+
+      <button type="submit">Send</button>
+    </form>
+
+    <nav>
+      <a href="/">Main</a>
+      <a href="/second">Second</a>
+      <a href="/third">Third</a>
+      <a href="/fourth">Fourth</a>
+      <a href="/form">Form</a>
+    </nav>
+  </body>
+</html>

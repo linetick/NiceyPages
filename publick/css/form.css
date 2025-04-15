@@ -1,0 +1,121 @@
+/* Общие стили */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #3498db;
+}
+
+p {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #7f8c8d;
+}
+
+/* Стили формы */
+form {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+form div {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+button[type="submit"] {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+/* Стили навигации */
+nav {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+nav a {
+  color: #3498db;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  form {
+    padding: 20px;
+  }
+}
